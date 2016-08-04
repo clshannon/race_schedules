@@ -39,6 +39,9 @@ THIRD_PARTY_APPS = (
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
+    'localflavor',
+    'bootstrap3',
+    'redactor',
 )
 
 # Apps specific for this project go here.
