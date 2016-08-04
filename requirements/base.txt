@@ -42,6 +42,9 @@ pytz==2016.6.1
 django-redis==4.4.4
 redis>=2.10.0
 
+# For form input creation
+django-localflavor==1.3
+
 
 
 

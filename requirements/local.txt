@@ -24,8 +24,5 @@ model-mommy==1.2.6
 webtest==2.0.23
 django-webtest==1.7.9
 
-# For form input creation
-django-localflavor==1.3
-
 # WYSIWYG editor for model fields
 django-wysiwyg-redactor==0.4.9
