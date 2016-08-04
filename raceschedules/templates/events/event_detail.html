@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% load common_filters %}
+
+{% block content %}
+<div class="page-header" id="banner">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>
+        {{ object }}
+      </h2>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+      {% if object.description %}
+      <p>{{ object.description|safe }}</p>
+      <hr>
+      {% endif %}
+      <h3>Activity Schedule</h3>
+      <table class="table table-striped table-hover table-condensed">
+        <thead>
+          <tr>
+            <th><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Description</th>
+            <th><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Mandatory</th>
+            <th><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Date</th>
+            <th><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Start Time</th>
+            <th><span class="glyphicon glyphicon-time" aria-hidden="true"></span> End Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for activity in object.activity_set.all %}
+            {% if activity.mandatory %}
+            <tr class="danger">
+            {% else %}
+            <tr>
+            {% endif %}
+              <td>{{ activity }}</td>
+              <td>
+                {% if activity.mandatory %}
+                  Yes
+                {% endif %}
+              </td>
+              <td>{{ activity.start_datetime|date:"D M d Y" }}</td>
+              <td>{{ activity.start_datetime|time:"TIME_FORMAT" }}</td>
+              <td>{{ activity.end_datetime|time:"TIME_FORMAT" }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="5">
+                No entries
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div><!-- /.blog-post -->
+  </div><!-- /.blog-main -->
+
+  <div class="col-sm-4 blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>Event Info</h4>
+      <table class="table table-striped table-condensed">
+        <tbody>
+          <tr>
+            <td><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Start:</td>
+            <td>{{ object.start_datetime }}</td>
+          </tr>
+          <tr>
+            <td><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> End:</td>
+            <td>{{ object.end_datetime }}</td>
+          </tr>
+          <tr>
+            <td><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Event Website:</td>
+            <td>
+              {% if object.website %}
+                <a href="{{ object.website }}" target="_blank">{{ object.website|truncatechars:32 }}</a></td>
+              {% endif %}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>Track Info</h4>
+      <h6>
+        <a href="{{ object.racetrack.get_absolute_url }}">{{ object.racetrack }}</a>
+
+      </h6>
+      <table class="table table-striped table-condensed">
+        <tbody>
+          <tr>
+            <td><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Phone: </td>
+            <td>{{ object.racetrack.main_phone|phone_number }}</td>
+          </tr>
+          <tr>
+            <td><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email:</td>
+            <td><a href="mailto:{{ object.racetrack.main_email }}">{{ object.racetrack.main_email }}</a></td>
+          </tr>
+          <tr>
+            <td><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Website:</td>
+            <td>
+              <a href="{{ object.racetrack.website }}" target="_blank">{{ object.racetrack.website|truncatechars:32 }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sidebar-module">
+      <h4>Sponsors</h4>
+      <div class="well">
+        Placeholder
+      </div>
+    </div>
+  </div>
+  <!-- /.blog-sidebar -->
+
+</div><!-- /.row -->
+
+{% endblock %}

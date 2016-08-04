@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header" id="banner">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>
+        Racetracks
+        <small>list</small>
+      </h3>
+    </div>
+  </div>
+</div>
+    <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+              <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Filter Placeholder <span class="sr-only">(current)</span></a></li>
+              </ul>
+            </div>
+            <div class="col-sm-9 main">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Location</th>
+                      <th>Events</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for object in object_list %}
+                      <tr>
+                        <td></td>
+                        <td>{{ object }}</td>
+                        <td>{{ object.city }}, {{ object.state }}</td>
+                        <td>
+                          {{ object.event_set.count }}
+                        </td>
+                        <td>
+                          <div class="btn-group btn-group-xs" role="group" aria-label="...">
+                            <a class="btn btn-primary" role="button" href="{{ object.get_absolute_url }}">
+                              <span class="glyphicon glyphicon-road" aria-hidden="true"></span> Details/Events
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    {% empty %}
+                      <tr>
+                        <td colspan="5">
+                          No entries
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock %}

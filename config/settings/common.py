@@ -46,6 +46,10 @@ LOCAL_APPS = (
     # custom users app
     'raceschedules.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'raceschedules.common',
+    'raceschedules.racetracks',
+    'raceschedules.events',
+    'raceschedules.activities',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
