@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
     
     <!-- Your stuff: Third-party CSS libraries go here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
     <!-- This file stores project-specific CSS -->
     <link href="{% static 'css/project.css' %}" rel="stylesheet">    
@@ -51,7 +52,24 @@
 
           <ul class="nav navbar-nav navbar-right">
             {% if request.user.is_authenticated %}
-            <li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					{% for x in request.user.socialaccount_set.all %}
+						{% if x.extra_data.picture %}
+							<img src="{{ x.extra_data.picture }}" width=30 height=30 />
+						{% else %}
+							<img src="http://placehold.it/30x30" class="avatar img-responsive">
+						{% endif %}
+					
+			        <span class="header-username">{{ request.user.first_name }}</span><span class="caret"></span>
+					{% endfor %}
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="">Action</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
+				</ul>
+			</li>
             {% else %}
             <li><a id="log-in-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
             {% endif %}

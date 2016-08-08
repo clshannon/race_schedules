@@ -42,6 +42,7 @@ THIRD_PARTY_APPS = (
     'localflavor',
     'bootstrap3',
     'redactor',
+    'allauth.socialaccount.providers.google', # Login via Google
 )
 
 # Apps specific for this project go here.
@@ -220,6 +221,10 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
+# Social account defaults
+SOCIALACCOUNT_QUERY_EMAIL = True
+SITE_ID = 1
+
 ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
 ACCOUNT_ADAPTER = 'raceschedules.users.adapters.AccountAdapter'
 SOCIALACCOUNT_ADAPTER = 'raceschedules.users.adapters.SocialAccountAdapter'
@@ -227,7 +232,7 @@ SOCIALACCOUNT_ADAPTER = 'raceschedules.users.adapters.SocialAccountAdapter'
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'users:redirect'
+LOGIN_REDIRECT_URL = 'racetracks:list'
 LOGIN_URL = 'account_login'
 
 # SLUGLIFIER
