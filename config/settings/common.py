@@ -43,6 +43,7 @@ THIRD_PARTY_APPS = (
     'bootstrap3',
     'redactor',
     'allauth.socialaccount.providers.google', # Login via Google
+    'rest_framework',
 )
 
 # Apps specific for this project go here.
@@ -248,3 +249,10 @@ ADMIN_URL = r'^admin/'
 
 
 # Your common stuff: Below this line define 3rd party library settings
+
+# django-rest-framework
+# ------------------------------------------------------------------------------
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGE_SIZE': 10
+}
