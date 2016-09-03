@@ -1,24 +1,5 @@
 [
     {
-        "model": "users.user",
-        "pk": 1,
-        "fields": {
-            "password": "pbkdf2_sha256$24000$P1PJhHvySRfb$tLoJQmfBThML3tmZsAWDYmFSpD2EnUl42AXnwra4lI8=",
-            "last_login": "2016-08-02T16:11:16.089Z",
-            "is_superuser": true,
-            "username": "admin",
-            "first_name": "",
-            "last_name": "",
-            "email": "chris@readymonster.com",
-            "is_staff": true,
-            "is_active": true,
-            "date_joined": "2016-08-02T16:10:54.561Z",
-            "name": "",
-            "groups": [],
-            "user_permissions": []
-        }
-    },
-    {
         "model": "racetracks.racetrack",
         "pk": 1,
         "fields": {
