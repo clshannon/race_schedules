@@ -129,6 +129,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
 DATABASES = {
     'default': {
          'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'NAME': 'raceschedules',
     },
 }
 
