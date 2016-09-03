@@ -117,8 +117,6 @@ DATABASES = {
     'default': {
          'ENGINE': 'django.contrib.gis.db.backends.postgis',
          'NAME': 'raceschedules',
-         'USER': 'raceschedules_user',
-         'PASSWORD': 'password',
     },
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
