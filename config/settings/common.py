@@ -27,6 +27,7 @@ DJANGO_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
 
     # Useful template tags:
     # 'django.contrib.humanize',
@@ -107,9 +108,18 @@ MANAGERS = ADMINS
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+#DATABASES = {
+ #   # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
+#  'default': env.db('DATABASE_URL', default='postgres:///raceschedules'),
+#}
+
 DATABASES = {
-    # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'default': env.db('DATABASE_URL', default='postgres:///raceschedules'),
+    'default': {
+         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'NAME': 'raceschedules',
+         'USER': 'raceschedules_user',
+         'PASSWORD': 'password',
+    },
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -218,9 +228,12 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Some really nice defaults
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
+#ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_SIGNUP_FORM_CLASS = 'raceschedules.users.forms.SignupForm'
 
 # Social account defaults
 SOCIALACCOUNT_QUERY_EMAIL = True
@@ -233,7 +246,10 @@ SOCIALACCOUNT_ADAPTER = 'raceschedules.users.adapters.SocialAccountAdapter'
 # Custom user app defaults
 # Select the correct user model
 AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'racetracks:list'
+#AUTH_USER_MODEL = 'users.UserProfile'
+#LOGIN_REDIRECT_URL = 'racetracks:list'
+
+LOGIN_REDIRECT_URL = 'users:redirect'
 LOGIN_URL = 'account_login'
 
 # SLUGLIFIER

@@ -1,5 +1,7 @@
+import geocoder
+
 from django.core.urlresolvers import reverse
-from django.db import models
+from django.contrib.gis.db import models
 
 from localflavor.us.us_states import STATE_CHOICES
 from redactor.fields import RedactorField
@@ -12,6 +14,7 @@ class Racetrack(models.Model):
     city = models.CharField(max_length=64)
     state = models.CharField(max_length=33, choices=STATE_CHOICES)
     zip = models.CharField(max_length=32)
+    point = models.PointField(srid=4326, null=True, blank=True)
     main_phone = models.BigIntegerField(null=True, blank=True)
     main_email = models.EmailField(max_length=128, null=True, blank=True)
     website = models.URLField(max_length=128, null=True, blank=True)
@@ -21,6 +24,15 @@ class Racetrack(models.Model):
 
     def get_absolute_url(self):
         return reverse('racetracks:detail', args=[str(self.id)])
+    
+    def save(self, *args, **kwargs):
+        address = self.street1+" "+self.city+" "+self.state+" "+str(self.zip)
+        g = geocoder.google(address)
+        latitude = g.latlng[0]
+        longitude = g.latlng[1]
+        pnt = 'POINT(' + str(longitude) + ' ' + str(latitude) + ')'
+        self.point = pnt
+        super(Racetrack, self).save(*args, **kwargs)
 
 class SurfaceType(models.Model):
     description = models.CharField(max_length=100)

@@ -5,29 +5,71 @@
 
 {% block content %}
 <div class="container">
-
-  <div class="row">
-    <div class="col-sm-12">
-
-      <h2>{{ object.username }}</h2>
-      {% if object.name %}
-        <p>{{ object.name }}</p>
-      {% endif %}
+  <div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>
+          My Profile
+        </h2>
+      </div>
     </div>
   </div>
 
 {% if object == request.user %}
-<!-- Action buttons -->
 <div class="row">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <div class="btn-group btn-group-xs pull-right">
+    	  <a class="btn btn-primary" href="{% url 'users:update' %}">
+      		<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Update My Info
+    	  </a>
+        </div>
+        Details
+      </div>
+      <div class="panel-body">
+        <p>Below are your details</p>
+      </div>
 
-  <div class="col-sm-12 ">
-    <a class="btn btn-primary" href="{% url 'users:update' %}">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}">E-Mail</a>
-    <!-- Your Stuff: Custom user template urls -->
+      <!-- Table -->
+      <table class="table">
+        <tr>
+    	    <td>First Name</td>
+    	    <td>{{ object.first_name }}</td>
+        </tr>
+        <tr>
+    	    <td>Last Name</td>
+    	    <td>{{ object.last_name }}</td>
+        </tr>
+        <tr>
+    	    <td>Email</td>
+    	    <td>{{ object.email }}</td>
+        </tr>
+        <tr>
+    	    <td>Zip</td>
+    	    <td>{{ object.userprofile.zip }}</td>
+        </tr>
+      </table>
+    </div>
   </div>
-
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">   
+        <div class="btn-group btn-group-xs pull-right">
+    		<a class="btn btn-info" href="{% url 'account_email' %}">
+      			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Configure E-Mail
+    		</a>
+        </div>
+        Email
+      </div>
+      <div class="panel-body">
+        <p>Emails</p>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- End Action buttons -->
 {% endif %}
 
 

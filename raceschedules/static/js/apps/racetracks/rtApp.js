@@ -1,0 +1,2 @@
+angular.module('racetrackapp', ['ngResource']);
+

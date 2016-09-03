@@ -1,646 +1,657 @@
 [
-  {
-    "model": "racetracks.racetrack",
-    "pk": 1,
-    "fields": {
-      "name": "Sebring International Raceway",
-      "description": "<h4>An Enduring Legend</h4><ul>\r\n\t<li>Sebring International Raceway is America’s oldest road racing track, with over six decades of storied history. </li>\r\n\t<li>The legendary circuit evolved from Hendricks Field, a World War II airbase used to train B-17 combat crews. </li>\r\n\t<li>On December 31, 1950, aviation and racing enthusiast Alec Ulmann promoted a six-hour race using the runways of the old airbase. </li>\r\n\t<li>Sebring burst onto the sports car racing scene and into the history books in March 1952 with a 12-hour endurance race that is now second only to Le Mans in international prestige. </li>\r\n\t<li>Each year on the third Saturday of March, 3.74 miles of concrete and asphalt challenge the giants of sports car racing to one of the world’s most grueling endurance tests.</li>\r\n</ul>",
-      "street1": "113 Midway Drive",
-      "street2": "",
-      "city": "Sebring",
-      "state": "FL",
-      "zip": "33870",
-      "main_phone": 8636551442,
-      "main_email": "info@sebringraceway.com",
-      "website": "http://www.sebringraceway.com/"
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$24000$P1PJhHvySRfb$tLoJQmfBThML3tmZsAWDYmFSpD2EnUl42AXnwra4lI8=",
+            "last_login": "2016-08-02T16:11:16.089Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "chris@readymonster.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2016-08-02T16:10:54.561Z",
+            "name": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 1,
+        "fields": {
+            "name": "Sebring International Raceway",
+            "description": "<h4>An Enduring Legend</h4><ul>\r\n\t<li>Sebring International Raceway is America’s oldest road racing track, with over six decades of storied history. </li>\r\n\t<li>The legendary circuit evolved from Hendricks Field, a World War II airbase used to train B-17 combat crews. </li>\r\n\t<li>On December 31, 1950, aviation and racing enthusiast Alec Ulmann promoted a six-hour race using the runways of the old airbase. </li>\r\n\t<li>Sebring burst onto the sports car racing scene and into the history books in March 1952 with a 12-hour endurance race that is now second only to Le Mans in international prestige. </li>\r\n\t<li>Each year on the third Saturday of March, 3.74 miles of concrete and asphalt challenge the giants of sports car racing to one of the world’s most grueling endurance tests.</li>\r\n</ul>",
+            "street1": "113 Midway Drive",
+            "street2": "",
+            "city": "Sebring",
+            "state": "FL",
+            "zip": "33870",
+            "point": "SRID=4326;POINT (-81.3496801000000147 27.4550124000000011)",
+            "main_phone": 8636551442,
+            "main_email": "info@sebringraceway.com",
+            "website": "http://www.sebringraceway.com/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 2,
+        "fields": {
+            "name": "Daytona International Speedway",
+            "description": "<p>Daytona International Speedway is a race track in Daytona Beach, Florida, United States. Since opening in 1959, it has been the home of the Daytona 500, the most prestigious race in NASCAR. In addition to NASCAR, the track also hosts races of ARCA, AMA Superbike, USCC, SCCA, and Motocross. The track features multiple layouts including the primary 2.5 miles (4.0 km) high speed tri-oval, a 3.56 miles (5.73 km) sports car course, a 2.95 miles (4.75 km) motorcycle course, and a .25 miles (0.40 km) karting and motorcycle flat-track. The track's 180-acre (73 ha) infield includes the 29-acre (12 ha) Lake Lloyd, which has hosted powerboat racing. The speedway is owned and operated by International Speedway Corporation.<span class=\"redactor-invisible-space\"></span></p>",
+            "street1": "1801 W International Speedway Blvd",
+            "street2": "",
+            "city": "Daytona Beach",
+            "state": "FL",
+            "zip": "32114",
+            "point": "SRID=4326;POINT (-81.0703057999999999 29.1870256999999995)",
+            "main_phone": 8007487467,
+            "main_email": "",
+            "website": "http://www.daytonainternationalspeedway.com/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 3,
+        "fields": {
+            "name": "Auburndale Speedway",
+            "description": "",
+            "street1": "5640 E County Rd 542",
+            "street2": "",
+            "city": "Winter Haven",
+            "state": "FL",
+            "zip": "33880",
+            "point": "SRID=4326;POINT (-81.7909099999999967 28.0315200000000004)",
+            "main_phone": 8635511131,
+            "main_email": "TrackOperations@AuburndaleSpeedway.net",
+            "website": "http://www.auburndalespeedway.net/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 4,
+        "fields": {
+            "name": "Volusia Speedway Park",
+            "description": "<p>Currently lease by ~ Dirt Life Racing, LLC Volusia Speedway Park (Formally known as Volusia County Speedway) is an auto racing facility located near Barberville in Volusia County, FL. It Operates a 1/2 mile dirt oval, and next door a 1/8 mile dirt oval for Karts. During February it hosts races from the Crafstman World of Outlaws Series (Both Sprint Cars & Late Models.) Som of the biggest names in the business show at VSP annually including Steve Kinser, Sammy Swindell, Joey Saldana, Jack Hewitt, Tony Stewart, Kasey Khane, Kenny Wallace, Shane Clanton, Scott Bloomquist, Josh Richards and many many others.</p>",
+            "street1": "1500 FL-40",
+            "street2": "",
+            "city": "De Leon Springs",
+            "state": "FL",
+            "zip": "32130",
+            "point": "SRID=4326;POINT (-81.3453064999999924 29.2150214999999989)",
+            "main_phone": 3869854402,
+            "main_email": "dirttrackracing15@yahoo.com",
+            "website": "http://vspdirtlife.com/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 5,
+        "fields": {
+            "name": "North Florida Speedway",
+            "description": "",
+            "street1": "287 Race Track Road",
+            "street2": "",
+            "city": "Lake City",
+            "state": "FL",
+            "zip": "32025",
+            "point": "SRID=4326;POINT (-82.6170355999999941 30.1251603000000010)",
+            "main_phone": 3867548800,
+            "main_email": "",
+            "website": "http://www.northfloridaspeedway.com/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 6,
+        "fields": {
+            "name": "New Smyrna Speedway",
+            "description": "<p>New Smyrna Speedway is a high-banked, half-mile paved oval track located just 5 miles West of New Smyrna Beach, Florida and just 10 miles South of Daytona Beach, Florida. Known by many as the “World Center of Racing”, New Smyrna Speedway has been home to some of the finest stock car racing in the entire Country now for more than 45 years.</p><p>Along with providing the best weekly racing and special events in the area, the Speedway has been highly utilized in recent years as a prime testing facility for some of the teams from the NASCAR Nationwide, Camping World Truck and Sprint Cup Series.</p>",
+            "street1": "3939 FL-44",
+            "street2": "",
+            "city": "New Smyrna Beach",
+            "state": "FL",
+            "zip": "32168",
+            "point": "SRID=4326;POINT (-81.0700349999999901 29.0138660000000002)",
+            "main_phone": 3864274129,
+            "main_email": "fascarkb@yahoo.com",
+            "website": "http://www.newsmyrnaspeedway.org/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 7,
+        "fields": {
+            "name": "Bronson Speedway",
+            "description": "<p>The Bronson Speedway is an asphalt, 1/3 mile racetrack located in Levy County, Florida, United States. It hosts several local racing series as well as a number of touring series throughout the year. Proud to claim to be the home track of \"The Best Drivers in the South\" Bronson generally runs events on every other weekend through the race season which stretches from January/February through August. Local race series include: 4-cylinders, a \"Strictly Stock\" class, \"Pure Stock\" class, \"Street Stock\" class, \"Sportsman\" class, \"Open-Wheel Modifieds,\" and Drift Racing Touring series which frequent the facility include the \"Pro-Challenge Series\" as well as the Florida United Promoters Series (including Sportsman, Pro-Truck, and Legends divisions) and the Daytona Antique Auto Racing Association (DAARA).</p>",
+            "street1": "9950 FL-24",
+            "street2": "",
+            "city": "Archer",
+            "state": "FL",
+            "zip": "32618",
+            "point": "SRID=4326;POINT (-82.6070550000000168 29.4734179999999988)",
+            "main_phone": 3524864998,
+            "main_email": "bronsonspeedway@aol.com",
+            "website": "http://www.bronsonspeedway.net/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 8,
+        "fields": {
+            "name": "Putnam County Speedway",
+            "description": "",
+            "street1": "1009 US-17",
+            "street2": "",
+            "city": "Satsuma",
+            "state": "FL",
+            "zip": "32189",
+            "point": "SRID=4326;POINT (-81.6435359999999974 29.5721880000000006)",
+            "main_phone": 9044512195,
+            "main_email": "joemoffo@yahoo.com",
+            "website": "http://www.putnamcountyspeedway.com/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 9,
+        "fields": {
+            "name": "Desoto Speedway",
+            "description": "",
+            "street1": "21050 State Road 64E",
+            "street2": "",
+            "city": "Bradenton",
+            "state": "FL",
+            "zip": "34212",
+            "point": "SRID=4326;POINT (-82.3261056000000053 27.4747841000000008)",
+            "main_phone": 9417483171,
+            "main_email": "desotospeedway1@gmail.com",
+            "website": "http://www.desotospeedway.net/"
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 10,
+        "fields": {
+            "name": "Three Palms Speedway",
+            "description": "",
+            "street1": "8655 Piper Rd",
+            "street2": "",
+            "city": "Punta Gorda",
+            "state": "FL",
+            "zip": "33982",
+            "point": "SRID=4326;POINT (-82.0004043999999936 26.9088944000000012)",
+            "main_phone": null,
+            "main_email": "",
+            "website": ""
+        }
+    },
+    {
+        "model": "racetracks.racetrack",
+        "pk": 11,
+        "fields": {
+            "name": "Citrus County Speedway and Track",
+            "description": "",
+            "street1": "3600 S Florida Ave",
+            "street2": "",
+            "city": "Inverness",
+            "state": "FL",
+            "zip": "34450",
+            "point": "SRID=4326;POINT (-82.3154540999999966 28.8082774000000015)",
+            "main_phone": 3526345953,
+            "main_email": "camronraycitruscountyspeedway@gmail.com",
+            "website": "http://www.citruscountyspeedwayandtrack.com/"
+        }
+    },
+    {
+        "model": "racetracks.surfacetype",
+        "pk": 1,
+        "fields": {
+            "description": "Asphalt",
+            "racetrack": [
+                1,
+                2,
+                3,
+                4,
+                6,
+                7,
+                9,
+                10,
+                11
+            ]
+        }
+    },
+    {
+        "model": "racetracks.surfacetype",
+        "pk": 2,
+        "fields": {
+            "description": "Dirt",
+            "racetrack": [
+                5,
+                8
+            ]
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 1,
+        "fields": {
+            "name": "Chump Car 14-Hour Race",
+            "description": "<h4>Real Racing!</h4><p>ChumpCar is North America's home for REAL, AFFORDABLE, COMPETITIVE road racing. We're talking real racing, real tracks and real cheap cars! We're talking endurance races that range from 7-hours to 24-hours long!\r\n</p>",
+            "start_datetime": "2016-09-23T11:00:00Z",
+            "end_datetime": "2016-09-24T12:00:00Z",
+            "website": "http://www.chumpcar.com/register/supplementalrules/286.pdf",
+            "racetrack": 1
+        }
+    },
+    {
+        "model": "events.event",
+        "pk": 2,
+        "fields": {
+            "name": "Performance Driving Group",
+            "description": "<h4>About PDG</h4><p>Performance Driving Group is a provider of weekend track days commonly known as HPDE (high performance driver education) where drivers get the opportunity to bring their cars to several race tracks in Florida, and drive on these race tracks at high speeds legally and in a predictable controlled environment.\r\n</p><p>First timers with no previous experience register in the Beginner group so that we can provide them with an instructor who will ride along with them in the passenger seat, giving them some instruction on driving and safety. Track driving is completely different than street driving and like all sports, it takes some instructing to learn it.\r\n</p><p>There is a 30 minute classroom session after the drivers meeting for Beginners, where the lead instructor will give some instruction on car control and passing rules. This is where drivers will get familiar with how to get on and off track, passing rules and flag talk. There are workers at every corner displaying different flags from time to time, and the flag talk will be about what each flag means.\r\n</p><p>Before a driver can enter the race track, a helmet most be worn, and a class designation decal must be visible by the course marshal. A self tech sheet needs to be completed and brought to registration before you can go on track.\r\n</p><p>There are 3 levels of drivers; Beginner, Intermediate and Advanced. Drivers will be placed according to their experience level.\r\n</p><p>All sales are final and there are no cash refunds for no shows.\r\n</p>",
+            "start_datetime": "2016-08-20T07:00:00Z",
+            "end_datetime": "2016-08-20T17:00:00Z",
+            "website": "http://performancedrivinggroup.com/product/august-20th-2016-sebring-international-raceway/",
+            "racetrack": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 1,
+        "fields": {
+            "name": "Gates Open",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T07:00:00Z",
+            "end_datetime": null,
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 2,
+        "fields": {
+            "name": "Registration",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T07:30:00Z",
+            "end_datetime": "2016-08-20T08:15:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 3,
+        "fields": {
+            "name": "HOT breakfast",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T07:30:00Z",
+            "end_datetime": "2016-08-20T08:45:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 4,
+        "fields": {
+            "name": "Drivers Meeting",
+            "mandatory": true,
+            "start_datetime": "2016-08-20T08:15:00Z",
+            "end_datetime": "2016-08-20T08:30:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 5,
+        "fields": {
+            "name": "Instructor meeting",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T08:30:00Z",
+            "end_datetime": "2016-08-20T08:40:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 6,
+        "fields": {
+            "name": "Group 300 Classroom",
+            "mandatory": true,
+            "start_datetime": "2016-08-20T08:45:00Z",
+            "end_datetime": "2016-08-20T09:15:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 7,
+        "fields": {
+            "name": "Group 100",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T09:00:00Z",
+            "end_datetime": "2016-08-20T09:25:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 8,
+        "fields": {
+            "name": "Group 200",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T09:25:00Z",
+            "end_datetime": "2016-08-20T09:50:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 9,
+        "fields": {
+            "name": "Group 300",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T09:50:00Z",
+            "end_datetime": "2016-08-20T10:15:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 10,
+        "fields": {
+            "name": "Group 100",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T10:15:00Z",
+            "end_datetime": "2016-08-20T10:40:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 11,
+        "fields": {
+            "name": "Group 200",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T10:40:00Z",
+            "end_datetime": "2016-08-20T11:05:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 12,
+        "fields": {
+            "name": "Group 300",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T11:05:00Z",
+            "end_datetime": "2016-08-20T11:30:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 13,
+        "fields": {
+            "name": "Group 100",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T11:30:00Z",
+            "end_datetime": "2016-08-20T11:55:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 14,
+        "fields": {
+            "name": "LUNCH",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T12:00:00Z",
+            "end_datetime": "2016-08-20T13:00:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 15,
+        "fields": {
+            "name": "Gates Open",
+            "mandatory": false,
+            "start_datetime": "2016-09-23T11:00:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 16,
+        "fields": {
+            "name": "Registration",
+            "mandatory": false,
+            "start_datetime": "2016-09-23T12:00:00Z",
+            "end_datetime": "2016-09-23T18:00:00Z",
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 17,
+        "fields": {
+            "name": "Safety, Tech Inspection",
+            "mandatory": false,
+            "start_datetime": "2016-09-23T12:00:00Z",
+            "end_datetime": "2016-09-23T18:00:00Z",
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 18,
+        "fields": {
+            "name": "Driver’s Gear Inspection",
+            "mandatory": false,
+            "start_datetime": "2016-09-23T12:00:00Z",
+            "end_datetime": "2016-09-23T18:00:00Z",
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 19,
+        "fields": {
+            "name": "Novice School",
+            "mandatory": false,
+            "start_datetime": "2016-09-23T17:00:00Z",
+            "end_datetime": "2016-09-23T17:30:00Z",
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 20,
+        "fields": {
+            "name": "Gates Open",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T06:00:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 21,
+        "fields": {
+            "name": "Drivers Meeting",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T08:00:00Z",
+            "end_datetime": "2016-09-24T08:20:00Z",
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 22,
+        "fields": {
+            "name": "Cars to Grid",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T08:50:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 23,
+        "fields": {
+            "name": "Parade Laps and Start Race",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T09:00:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 24,
+        "fields": {
+            "name": "Checker Flag",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T11:00:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 25,
+        "fields": {
+            "name": "Post-race Inspection",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T11:05:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 26,
+        "fields": {
+            "name": "Awards Ceremony",
+            "mandatory": false,
+            "start_datetime": "2016-09-24T11:30:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 27,
+        "fields": {
+            "name": "No on-track event activity on Sunday",
+            "mandatory": false,
+            "start_datetime": "2016-09-25T00:00:00Z",
+            "end_datetime": null,
+            "event": 1
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 28,
+        "fields": {
+            "name": "Group 200",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T13:00:00Z",
+            "end_datetime": "2016-08-20T13:25:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 29,
+        "fields": {
+            "name": "Group 300",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T13:25:00Z",
+            "end_datetime": "2016-08-20T13:50:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 30,
+        "fields": {
+            "name": "Group 100",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T13:50:00Z",
+            "end_datetime": "2016-08-20T14:15:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 31,
+        "fields": {
+            "name": "Group 200",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T14:15:00Z",
+            "end_datetime": "2016-08-20T14:40:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 32,
+        "fields": {
+            "name": "Group 300",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T14:40:00Z",
+            "end_datetime": "2016-08-20T15:05:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 33,
+        "fields": {
+            "name": "Group 100",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T15:05:00Z",
+            "end_datetime": "2016-08-20T15:30:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 34,
+        "fields": {
+            "name": "Group 200",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T15:30:00Z",
+            "end_datetime": "2016-08-20T15:55:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 35,
+        "fields": {
+            "name": "Group 300",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T15:55:00Z",
+            "end_datetime": "2016-08-20T16:20:00Z",
+            "event": 2
+        }
+    },
+    {
+        "model": "activities.activity",
+        "pk": 36,
+        "fields": {
+            "name": "Open Track with passing rules",
+            "mandatory": false,
+            "start_datetime": "2016-08-20T16:20:00Z",
+            "end_datetime": "2016-08-20T17:00:00Z",
+            "event": 2
+        }
     }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 2,
-    "fields": {
-      "name": "Daytona International Speedway",
-      "description": "<p>Daytona International Speedway is a race track in Daytona Beach, Florida, United States. Since opening in 1959, it has been the home of the Daytona 500, the most prestigious race in NASCAR. In addition to NASCAR, the track also hosts races of ARCA, AMA Superbike, USCC, SCCA, and Motocross. The track features multiple layouts including the primary 2.5 miles (4.0 km) high speed tri-oval, a 3.56 miles (5.73 km) sports car course, a 2.95 miles (4.75 km) motorcycle course, and a .25 miles (0.40 km) karting and motorcycle flat-track. The track's 180-acre (73 ha) infield includes the 29-acre (12 ha) Lake Lloyd, which has hosted powerboat racing. The speedway is owned and operated by International Speedway Corporation.<span class=\"redactor-invisible-space\"></span></p>",
-      "street1": "1801 W International Speedway Blvd",
-      "street2": "",
-      "city": "Daytona Beach",
-      "state": "FL",
-      "zip": "32114",
-      "main_phone": 8007487467,
-      "main_email": "",
-      "website": "http://www.daytonainternationalspeedway.com/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 3,
-    "fields": {
-      "name": "Auburndale Speedway",
-      "description": "",
-      "street1": "5640 E County Rd 542",
-      "street2": "",
-      "city": "Winter Haven",
-      "state": "FL",
-      "zip": "33880",
-      "main_phone": 8635511131,
-      "main_email": "TrackOperations@AuburndaleSpeedway.net",
-      "website": "http://www.auburndalespeedway.net/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 4,
-    "fields": {
-      "name": "Volusia Speedway Park",
-      "description": "<p>Currently lease by ~ Dirt Life Racing, LLC Volusia Speedway Park (Formally known as Volusia County Speedway) is an auto racing facility located near Barberville in Volusia County, FL. It Operates a 1/2 mile dirt oval, and next door a 1/8 mile dirt oval for Karts. During February it hosts races from the Crafstman World of Outlaws Series (Both Sprint Cars & Late Models.) Som of the biggest names in the business show at VSP annually including Steve Kinser, Sammy Swindell, Joey Saldana, Jack Hewitt, Tony Stewart, Kasey Khane, Kenny Wallace, Shane Clanton, Scott Bloomquist, Josh Richards and many many others.</p>",
-      "street1": "1500 FL-40",
-      "street2": "",
-      "city": "De Leon Springs",
-      "state": "FL",
-      "zip": "32130",
-      "main_phone": 3869854402,
-      "main_email": "dirttrackracing15@yahoo.com",
-      "website": "http://vspdirtlife.com/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 5,
-    "fields": {
-      "name": "North Florida Speedway",
-      "description": "",
-      "street1": "287 Race Track Road",
-      "street2": "",
-      "city": "Lake City",
-      "state": "FL",
-      "zip": "32025",
-      "main_phone": 3867548800,
-      "main_email": "",
-      "website": "http://www.northfloridaspeedway.com/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 6,
-    "fields": {
-      "name": "New Smyrna Speedway",
-      "description": "<p>New Smyrna Speedway is a high-banked, half-mile paved oval track located just 5 miles West of New Smyrna Beach, Florida and just 10 miles South of Daytona Beach, Florida. Known by many as the “World Center of Racing”, New Smyrna Speedway has been home to some of the finest stock car racing in the entire Country now for more than 45 years.</p><p>Along with providing the best weekly racing and special events in the area, the Speedway has been highly utilized in recent years as a prime testing facility for some of the teams from the NASCAR Nationwide, Camping World Truck and Sprint Cup Series.</p>",
-      "street1": "3939 FL-44",
-      "street2": "",
-      "city": "New Smyrna Beach",
-      "state": "FL",
-      "zip": "32168",
-      "main_phone": 3864274129,
-      "main_email": "fascarkb@yahoo.com",
-      "website": "http://www.newsmyrnaspeedway.org/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 7,
-    "fields": {
-      "name": "Bronson Speedway",
-      "description": "<p>The Bronson Speedway is an asphalt, 1/3 mile racetrack located in Levy County, Florida, United States. It hosts several local racing series as well as a number of touring series throughout the year. Proud to claim to be the home track of \"The Best Drivers in the South\" Bronson generally runs events on every other weekend through the race season which stretches from January/February through August. Local race series include: 4-cylinders, a \"Strictly Stock\" class, \"Pure Stock\" class, \"Street Stock\" class, \"Sportsman\" class, \"Open-Wheel Modifieds,\" and Drift Racing Touring series which frequent the facility include the \"Pro-Challenge Series\" as well as the Florida United Promoters Series (including Sportsman, Pro-Truck, and Legends divisions) and the Daytona Antique Auto Racing Association (DAARA).</p>",
-      "street1": "9950 FL-24",
-      "street2": "",
-      "city": "Archer",
-      "state": "FL",
-      "zip": "32618",
-      "main_phone": 3524864998,
-      "main_email": "bronsonspeedway@aol.com",
-      "website": "http://www.bronsonspeedway.net/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 8,
-    "fields": {
-      "name": "Putnam County Speedway",
-      "description": "",
-      "street1": "1009 US-17",
-      "street2": "",
-      "city": "Satsuma",
-      "state": "FL",
-      "zip": "32189",
-      "main_phone": 9044512195,
-      "main_email": "joemoffo@yahoo.com",
-      "website": "http://www.putnamcountyspeedway.com/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 9,
-    "fields": {
-      "name": "Desoto Speedway",
-      "description": "",
-      "street1": "21050 State Road 64E",
-      "street2": "",
-      "city": "Bradenton",
-      "state": "FL",
-      "zip": "34212",
-      "main_phone": 9417483171,
-      "main_email": "desotospeedway1@gmail.com",
-      "website": "http://www.desotospeedway.net/"
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 10,
-    "fields": {
-      "name": "Three Palms Speedway",
-      "description": "",
-      "street1": "8655 Piper Rd",
-      "street2": "",
-      "city": "Punta Gorda",
-      "state": "FL",
-      "zip": "33982",
-      "main_phone": null,
-      "main_email": "",
-      "website": ""
-    }
-  },
-  {
-    "model": "racetracks.racetrack",
-    "pk": 11,
-    "fields": {
-      "name": "Citrus County Speedway and Track",
-      "description": "",
-      "street1": "3600 S Florida Ave",
-      "street2": "",
-      "city": "Inverness",
-      "state": "FL",
-      "zip": "34450",
-      "main_phone": 3526345953,
-      "main_email": "camronraycitruscountyspeedway@gmail.com",
-      "website": "http://www.citruscountyspeedwayandtrack.com/"
-    }
-  },
-  {
-    "model": "racetracks.surfacetype",
-    "pk": 1,
-    "fields": {
-      "description": "Asphalt",
-      "racetrack": [
-        1,
-        2,
-        3,
-        4,
-        6,
-        7,
-        9,
-        10,
-        11
-      ]
-    }
-  },
-  {
-    "model": "racetracks.surfacetype",
-    "pk": 2,
-    "fields": {
-      "description": "Dirt",
-      "racetrack": [
-        5,
-        8
-      ]
-    }
-  },
-  {
-    "model": "events.event",
-    "pk": 1,
-    "fields": {
-      "name": "Chump Car 14-Hour Race",
-      "description": "<h4>Real Racing!</h4><p>ChumpCar is North America's home for REAL, AFFORDABLE, COMPETITIVE road racing. We're talking real racing, real tracks and real cheap cars! We're talking endurance races that range from 7-hours to 24-hours long!\r\n</p>",
-      "start_datetime": "2016-09-23T11:00:00Z",
-      "end_datetime": "2016-09-24T12:00:00Z",
-      "website": "http://www.chumpcar.com/register/supplementalrules/286.pdf",
-      "racetrack": 1
-    }
-  },
-  {
-    "model": "events.event",
-    "pk": 2,
-    "fields": {
-      "name": "Performance Driving Group",
-      "description": "<h4>About PDG</h4><p>Performance Driving Group is a provider of weekend track days commonly known as HPDE (high performance driver education) where drivers get the opportunity to bring their cars to several race tracks in Florida, and drive on these race tracks at high speeds legally and in a predictable controlled environment.\r\n</p><p>First timers with no previous experience register in the Beginner group so that we can provide them with an instructor who will ride along with them in the passenger seat, giving them some instruction on driving and safety. Track driving is completely different than street driving and like all sports, it takes some instructing to learn it.\r\n</p><p>There is a 30 minute classroom session after the drivers meeting for Beginners, where the lead instructor will give some instruction on car control and passing rules. This is where drivers will get familiar with how to get on and off track, passing rules and flag talk. There are workers at every corner displaying different flags from time to time, and the flag talk will be about what each flag means.\r\n</p><p>Before a driver can enter the race track, a helmet most be worn, and a class designation decal must be visible by the course marshal. A self tech sheet needs to be completed and brought to registration before you can go on track.\r\n</p><p>There are 3 levels of drivers; Beginner, Intermediate and Advanced. Drivers will be placed according to their experience level.\r\n</p><p>All sales are final and there are no cash refunds for no shows.\r\n</p>",
-      "start_datetime": "2016-08-20T07:00:00Z",
-      "end_datetime": "2016-08-20T17:00:00Z",
-      "website": "http://performancedrivinggroup.com/product/august-20th-2016-sebring-international-raceway/",
-      "racetrack": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 1,
-    "fields": {
-      "name": "Gates Open",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T07:00:00Z",
-      "end_datetime": null,
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 2,
-    "fields": {
-      "name": "Registration",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T07:30:00Z",
-      "end_datetime": "2016-08-20T08:15:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 3,
-    "fields": {
-      "name": "HOT breakfast",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T07:30:00Z",
-      "end_datetime": "2016-08-20T08:45:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 4,
-    "fields": {
-      "name": "Drivers Meeting",
-      "mandatory": true,
-      "start_datetime": "2016-08-20T08:15:00Z",
-      "end_datetime": "2016-08-20T08:30:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 5,
-    "fields": {
-      "name": "Instructor meeting",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T08:30:00Z",
-      "end_datetime": "2016-08-20T08:40:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 6,
-    "fields": {
-      "name": "Group 300 Classroom",
-      "mandatory": true,
-      "start_datetime": "2016-08-20T08:45:00Z",
-      "end_datetime": "2016-08-20T09:15:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 7,
-    "fields": {
-      "name": "Group 100",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T09:00:00Z",
-      "end_datetime": "2016-08-20T09:25:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 8,
-    "fields": {
-      "name": "Group 200",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T09:25:00Z",
-      "end_datetime": "2016-08-20T09:50:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 9,
-    "fields": {
-      "name": "Group 300",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T09:50:00Z",
-      "end_datetime": "2016-08-20T10:15:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 10,
-    "fields": {
-      "name": "Group 100",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T10:15:00Z",
-      "end_datetime": "2016-08-20T10:40:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 11,
-    "fields": {
-      "name": "Group 200",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T10:40:00Z",
-      "end_datetime": "2016-08-20T11:05:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 12,
-    "fields": {
-      "name": "Group 300",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T11:05:00Z",
-      "end_datetime": "2016-08-20T11:30:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 13,
-    "fields": {
-      "name": "Group 100",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T11:30:00Z",
-      "end_datetime": "2016-08-20T11:55:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 14,
-    "fields": {
-      "name": "LUNCH",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T12:00:00Z",
-      "end_datetime": "2016-08-20T13:00:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 15,
-    "fields": {
-      "name": "Gates Open",
-      "mandatory": false,
-      "start_datetime": "2016-09-23T11:00:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 16,
-    "fields": {
-      "name": "Registration",
-      "mandatory": false,
-      "start_datetime": "2016-09-23T12:00:00Z",
-      "end_datetime": "2016-09-23T18:00:00Z",
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 17,
-    "fields": {
-      "name": "Safety, Tech Inspection",
-      "mandatory": false,
-      "start_datetime": "2016-09-23T12:00:00Z",
-      "end_datetime": "2016-09-23T18:00:00Z",
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 18,
-    "fields": {
-      "name": "Driver’s Gear Inspection",
-      "mandatory": false,
-      "start_datetime": "2016-09-23T12:00:00Z",
-      "end_datetime": "2016-09-23T18:00:00Z",
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 19,
-    "fields": {
-      "name": "Novice School",
-      "mandatory": false,
-      "start_datetime": "2016-09-23T17:00:00Z",
-      "end_datetime": "2016-09-23T17:30:00Z",
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 20,
-    "fields": {
-      "name": "Gates Open",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T06:00:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 21,
-    "fields": {
-      "name": "Drivers Meeting",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T08:00:00Z",
-      "end_datetime": "2016-09-24T08:20:00Z",
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 22,
-    "fields": {
-      "name": "Cars to Grid",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T08:50:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 23,
-    "fields": {
-      "name": "Parade Laps and Start Race",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T09:00:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 24,
-    "fields": {
-      "name": "Checker Flag",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T11:00:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 25,
-    "fields": {
-      "name": "Post-race Inspection",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T11:05:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 26,
-    "fields": {
-      "name": "Awards Ceremony",
-      "mandatory": false,
-      "start_datetime": "2016-09-24T11:30:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 27,
-    "fields": {
-      "name": "No on-track event activity on Sunday",
-      "mandatory": false,
-      "start_datetime": "2016-09-25T00:00:00Z",
-      "end_datetime": null,
-      "event": 1
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 28,
-    "fields": {
-      "name": "Group 200",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T13:00:00Z",
-      "end_datetime": "2016-08-20T13:25:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 29,
-    "fields": {
-      "name": "Group 300",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T13:25:00Z",
-      "end_datetime": "2016-08-20T13:50:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 30,
-    "fields": {
-      "name": "Group 100",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T13:50:00Z",
-      "end_datetime": "2016-08-20T14:15:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 31,
-    "fields": {
-      "name": "Group 200",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T14:15:00Z",
-      "end_datetime": "2016-08-20T14:40:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 32,
-    "fields": {
-      "name": "Group 300",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T14:40:00Z",
-      "end_datetime": "2016-08-20T15:05:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 33,
-    "fields": {
-      "name": "Group 100",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T15:05:00Z",
-      "end_datetime": "2016-08-20T15:30:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 34,
-    "fields": {
-      "name": "Group 200",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T15:30:00Z",
-      "end_datetime": "2016-08-20T15:55:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 35,
-    "fields": {
-      "name": "Group 300",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T15:55:00Z",
-      "end_datetime": "2016-08-20T16:20:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "activities.activity",
-    "pk": 36,
-    "fields": {
-      "name": "Open Track with passing rules",
-      "mandatory": false,
-      "start_datetime": "2016-08-20T16:20:00Z",
-      "end_datetime": "2016-08-20T17:00:00Z",
-      "event": 2
-    }
-  },
-  {
-    "model": "users.user",
-    "pk": 1,
-    "fields": {
-      "password": "pbkdf2_sha256$24000$P1PJhHvySRfb$tLoJQmfBThML3tmZsAWDYmFSpD2EnUl42AXnwra4lI8=",
-      "last_login": "2016-08-02T16:11:16.089Z",
-      "is_superuser": true,
-      "username": "admin",
-      "first_name": "",
-      "last_name": "",
-      "email": "chris@readymonster.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2016-08-02T16:10:54.561Z",
-      "name": "",
-      "groups": [],
-      "user_permissions": []
-    }
-  }
 ]

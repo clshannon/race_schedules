@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load staticfiles i18n %}
 {% block content %}
 <div class="page-header" id="banner">
   <div class="row">
@@ -11,55 +11,71 @@
     </div>
   </div>
 </div>
-    <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-              <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Filter Placeholder <span class="sr-only">(current)</span></a></li>
-              </ul>
-            </div>
-            <div class="col-sm-9 main">
-              <div class="table-responsive">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Location</th>
-                      <th>Events</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {% for object in object_list %}
-                      <tr>
-                        <td></td>
-                        <td>{{ object }}</td>
-                        <td>{{ object.city }}, {{ object.state }}</td>
-                        <td>
-                          {{ object.event_set.count }}
-                        </td>
-                        <td>
-                          <div class="btn-group btn-group-xs" role="group" aria-label="...">
-                            <a class="btn btn-primary" role="button" href="{{ object.get_absolute_url }}">
-                              <span class="glyphicon glyphicon-road" aria-hidden="true"></span> Details/Events
-                            </a>
-                          </div>
-                        </td>
-                      </tr>
-                    {% empty %}
-                      <tr>
-                        <td colspan="5">
-                          No entries
-                        </td>
-                      </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="container-fluid ng-cloak" ng-app="racetrackapp" ng-controller="rtRacetrackListCtrl">
+    <div class="row">
+		<div class="col-sm-3 sidebar">
+			{% if request.user.is_authenticated %}
+			<h6>
+				<span class="label label-info">
+					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Your Location: {{ request.user.userprofile.zip }}
+				</span>
+			</h6>
+			{% verbatim %}
+			<div class="form-group">
+				<div class="input-group input-group-sm">
+					<label for="sel1">Distance Filter:</label>
+					<select class="form-control" ng-model="distanceFilter" ng-change="applyDistanceFilter()" ng-options='option.name for option in distanceFilterOptions'></select>
+				</div>
+			</div>
+			{% endverbatim %}
+			{% else %}
+			<h6>
+				<span class="label label-info">
+					<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Your Location: ?
+				</span>
+			</h6>
+			<p>Sign in to filter based on location</p>
+			{% endif %}
+		</div>
+       <div class="col-sm-9 main">
+         <div class="table-responsive">
+           <table class="table table-striped">
+             <thead>
+               <tr>
+                 <th>#</th>
+                 <th>Name</th>
+                 <th>Location</th>
+                 <th>Events</th>
+                 <th>Distance</th>
+                 <th>Actions</th>
+               </tr>
+             </thead>
+             <tbody>
+             	{% verbatim %}
+				    <tr ng-repeat="track in racetracks.results">
+				    	<td></td>
+				    	<td>{{ track.name }}</td>
+				    	<td>{{ track.city }}, {{ track.state }}</td>
+				    	<td>{{ track.event_set.length }}</td>
+				    	<td>{{ track.distance | number:1 }} <small><i>mi</i></small></td>
+	                   <td>
+	                     <div class="btn-group btn-group-xs" role="group" aria-label="...">
+	                       <a class="btn btn-primary" role="button" href="/racetracks/{{ track.id }}/">
+	                         <span class="glyphicon glyphicon-road" aria-hidden="true"></span> Details/Events
+	                       </a>
+	                     </div>
+	                   </td>
+				    </tr>
+				    <tr ng-show="!racetracks.results.length && !loading" ng-cloak><td colspan=6>No items found</td></tr>
+				    
+				{% endverbatim %}
+				    <tr ng-show="loading"><td colspan=6 align="center"><img src="{% static 'images/spin.gif' %}" /></td></tr>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+   </div>
 
 
 {% endblock %}

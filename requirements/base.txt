@@ -60,3 +60,6 @@ django-wysiwyg-redactor==0.4.9
 
 #djangorestwork
 djangorestframework==3.4.4
+
+#geocoder
+geocoder==1.16.3
